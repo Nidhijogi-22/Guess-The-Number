@@ -8,23 +8,13 @@ target=random.randrange(100)
 
 def guess_number():
     global guess_counter
-    user_input=entry_guess.get()
-    # print("Let's start the game!")
-
-    # if not user_input.strip():  # Check if the input is empty
-    #     label_result.config(text="Please enter a number!", fg="red")
-    #     return
-
+    
     try:
         my_guess = int(user_input)  # Convert the input to an integer
     except ValueError:  # Handle non-integer input
         label_result.config(text="Invalid input! Please enter a valid number.", fg="orange")
         return
-
-    # while guess_counter<chances:
-    #     # my_guess=int(input("Enter your guess: "))
-    #     # my_guess = int(entry_guess.get())
-    #     my_guess=int(user_input)
+        
     guess_counter += 1
     entry_guess.delete(0, END)
         
